@@ -1,0 +1,10 @@
+
+	修改model.py，在里面添加类
+
+	迁移数据库
+	python manage.py makemigrations learning_logs
+	
+	应用迁移
+	python manage.py migrate
+	
+	在admin.py中注册模型
