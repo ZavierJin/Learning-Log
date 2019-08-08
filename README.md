@@ -7,3 +7,4 @@
 记录学到的知识可以帮助跟踪和复习这些知识。
 
 项目名learning-log
+应用程序名：learning-logs
