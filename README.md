@@ -6,5 +6,8 @@
 用户登录后，可以创建新主题、添加新条目以及阅读既有条目。
 记录学到的知识可以帮助跟踪和复习这些知识。
 
-项目名learning-log
-应用程序名：learning-logs
+项目名：learning-log
+
+应用程序：
+learning-logs
+users

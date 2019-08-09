@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # 我的应用
     'learning_logs',
+    'users',
 ]
 
 MIDDLEWARE = [
