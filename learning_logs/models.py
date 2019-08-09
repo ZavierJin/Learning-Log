@@ -1,11 +1,13 @@
-
+""" 数据模型 """
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Topic(models.Model):
     """ 用户学习的主题 """
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(User)     # 外键 关联
 
     def __str__(self):
         """ 返回模型的字符串表示 """
