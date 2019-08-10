@@ -8,6 +8,14 @@ from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
 
 
+def check_topic_owner(request, topic):
+    """ 检查当前用户是否为主题关联的用户 """
+    if request.user == topic.owner:
+        return True
+    else:
+        return False
+
+
 def index(request):
     """ 学习笔记的主页 """
     return render(request, 'learning_logs/index.html')
@@ -26,7 +34,7 @@ def topic(request, topic_id):
     """ 显示单个主题及其所有的条目 """
     topic = Topic.objects.get(id=topic_id)
     # 确认请求的主题属于当前用户
-    if topic.owner != request.user:
+    if not check_topic_owner(request, topic):
         raise Http404   # 引发Http404异常
     entries = topic.entry_set.order_by('-date_added')
     context = {'entries': entries, 'topic': topic}
@@ -56,6 +64,8 @@ def new_topic(request):
 def new_entry(request, topic_id):
     """ 在特定的主题中添加新条目 """
     topic = Topic.objects.get(id=topic_id)
+    if not check_topic_owner(request, topic):
+        raise Http404
 
     if request.method != 'POST':
         # 未提交数据：创建一个空表单
@@ -79,7 +89,7 @@ def edit_entry(request, entry_id):
     """ 编辑既有条目 """
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
-    if topic.owner != request.user:
+    if not check_topic_owner(request, topic):
         raise Http404
 
     if request.method != 'POST':

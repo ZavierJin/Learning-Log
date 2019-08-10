@@ -1,6 +1,7 @@
 
 	激活虚拟环境
-	先进入Learning-log目录，再ll_env\Scripts\activate
+	先进入Learning-log目录，再
+	ll_env\Scripts\activate
 
 	修改model.py，在里面添加类
 
