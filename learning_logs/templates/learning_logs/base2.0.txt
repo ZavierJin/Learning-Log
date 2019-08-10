@@ -1,9 +1,9 @@
-<!-- æ¨¡æ¿åŸºç¡€ -->
+<!-- Ä£°å»ù´¡ -->
 
-<!-- åŠ è½½django-bootstrap3çš„æ¨¡æ¿æ ‡ç­¾é›† -->
+<!-- ¼ÓÔØdjango-bootstrap3µÄÄ£°å±êÇ©¼¯ -->
 {% load bootstrap3 %}
 
-<!-- ä½¿ç”¨HTMLæ–‡æ¡£ï¼Œenä¸ºä½¿ç”¨è‹±æ–‡ -->
+<!-- Ê¹ÓÃHTMLÎÄµµ£¬enÎªÊ¹ÓÃÓ¢ÎÄ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +15,7 @@
 
     <title>Learning Log</title>
 
-    <!-- ä½¿ç”¨è‡ªå®šä¹‰æ¨¡æ¿æ ‡ç­¾ -->
+    <!-- Ê¹ÓÃ×Ô¶¨ÒåÄ£°å±êÇ© -->
     {% bootstrap_css %}  
     {% bootstrap_javascript %}
 
@@ -23,7 +23,7 @@
 
   <body>
 
-    <!-- Static navbar å¯¼èˆªæ  -->
+    <!-- Static navbar µ¼º½À¸ -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Log</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'learning_logs:index' %}">Home</a>
           </li>
@@ -52,7 +52,7 @@
       </div>
     </nav>
 
-    <!-- é¡µé¢ä¸»è¦éƒ¨åˆ† -->
+    <!-- Ò³ÃæÖ÷Òª²¿·Ö -->
     <div class="container">
       
       <div class="page-header">
